@@ -22,7 +22,7 @@
 ## User Interface
 The user interface includes:
 - **Login and Sign-Up Pages**: For account creation and access.
-- **Navigation Menu**: Easy access to different sections of the website.
+- **Navigation Menu**: Easy access to different website sections.
 - **Quiz Pages**: Interactive quiz formats with real-time feedback.
 - **Leaderboards**: Display user scores and rankings.
 
