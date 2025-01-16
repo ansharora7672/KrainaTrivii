@@ -1,0 +1,100 @@
+.category-quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100vw;
+    background: url('../assets/homebackground.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding-top: var(--navbar-height);
+}
+
+.quiz-layout {
+    display: flex;
+    justify-content: center; /* Center the children horizontally */
+    align-items: center; /* Center the children vertically */
+    width: 100%;
+    margin-top: 0; /* Adjusted to remove additional top margin */
+    padding: 60px 20px; /* Padding for some spacing around the elements */
+}
+
+.quiz-box {
+    width: 40%; /* Reduced width */
+    min-width: 300px; /* Ensures a minimum width for the quiz box */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    color: white;
+    margin-left: 100px; /* Space between quiz box and image */
+    margin-top: 0; /* Align the top of the quiz box with the navbar */
+    max-width: 600px; /* Limit the maximum width if necessary */
+}
+
+.quiz-category {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.quiz-question {
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.option {
+    background-color: #fff;
+    border: none;
+    color: #333;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 5px;
+    text-align: left;
+}
+
+
+
+.option.correct {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.option.incorrect {
+    background-color: #f44336;
+    color: white;
+}
+
+.right-side-image-container {
+    flex: 1;
+    display: flex; /* Use flex to help with alignment */
+    justify-content: flex-end; /* Align image to the end of the container */
+}
+
+.right-side-image {
+    max-width: 400px; /* Adjust the max-width as needed for your image */
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .quiz-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-side-image-container {
+        justify-content: center;
+        margin-top: 20px;
+        margin-right: 100px;
+    }
+
+    .right-side-image {
+        max-width: 80%; /* Make the image larger on smaller screens */
+    }
+}

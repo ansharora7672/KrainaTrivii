@@ -1,0 +1,50 @@
+
+.leaderboard-container {
+    background-image: url('../assets/firstpagebackground.jpg');
+  background-size: cover;
+  background-position: center;
+    margin-top: 50px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+
+.leaderboard-item {
+    width: 80%;
+    max-width: 600px; 
+    background-color: #333; 
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+
+.username {
+    margin-right: 10px;
+}
+
+
+.score {
+    margin-left: 10px;
+}
+
+
+.navbar {
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: #fff;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute; 
+    z-index: 1; 
+}

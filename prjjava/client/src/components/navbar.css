@@ -1,0 +1,88 @@
+/* General styles for the navbar */
+.navbar {
+  width: 100%;
+  background-color: #2C2C2D;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem; /* Adjust padding as needed */
+  box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+  position: absolute; /* Adjust positioning as needed */
+  top: 0; /* Align to top */
+  z-index: 1000; /* Ensure it's above other items */
+}
+
+/* Logo styles */
+.logo {
+  font-size: 2rem;
+  color: gold;
+  padding-left: 20px;
+  text-decoration: none;
+}
+
+/* Navigation link container styles */
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem; /* Adds space between nav items */
+}
+
+/* Navigation item styles */
+.nav-item {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px; /* If you want rounded corners */
+  transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+/* Change background color on hover */
+.nav-item:hover {
+  background-color: #555; /* Slightly darker shade on hover */
+}
+
+/* Hamburger menu icon styles */
+.menu-icon {
+  width: 3rem; /* Adjust the size as needed */
+  height: auto;
+  cursor: pointer;
+  display: none; /* Hidden by default, shown in mobile view */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%; /* Position below the navbar */
+    right: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333; /* Same as navbar for consistency */
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .nav-links.show {
+    display: flex;
+    max-height: 500px; /* Set a max-height for the transition */
+    transition: max-height 0.3s ease-in;
+  }
+
+  .menu-icon {
+    display: block; /* Show menu icon in mobile view */
+  }
+
+  .nav-item {
+    width: 100%;
+    right:0%;
+    padding: 1rem; /* More padding for touch targets */
+    text-align: center;
+    margin-right: 0px; /* Center text for a tidier look */
+  }
+
+  .logo {
+    font-size: 1.5rem; /* Adjust logo size for mobile */
+  }
+}
